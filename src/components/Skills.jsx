@@ -8,7 +8,7 @@ import TAILWIND from "../assets/tailwind.png";
 
 function Skills() {
   return (
-    <div className="w-full h-screen bg-[#0a192f] text-gray-300 px-4">
+    <div id="skills" className="w-full h-screen bg-[#0a192f] text-gray-300 px-4">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="grid sm:grid-cols-2 gap-8 max-w-[1000px]  w-full md:pb-4">
           <div>

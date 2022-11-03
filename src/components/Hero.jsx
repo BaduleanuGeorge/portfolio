@@ -4,7 +4,7 @@ import profile from "../assets/image.jpg";
 function Hero() {
   return (
     <div
-      name="home"
+      id="home"
       className="flex flex-col justify-center items-center text-gray-300 bg-[#0a192f] w-full h-screen px-4 text-left"
     >
       <div className="pb-12">
