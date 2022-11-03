@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+@layer base{
+    body{
+        @apply font-[Poppins];
+    }
+
+    li{
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
