@@ -17,7 +17,7 @@ function Work() {
 
         <div className="flex justify-center items-center gap-8">
           <a href="https://www.youtube.com/watch?v=mpnNtkoynas" target="_blank"><button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 duration-300 px-4 my-4 py-3 mx-auto flex items-center">Demo</button></a>
-          <button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 duration-300 px-4 my-4 py-3 mx-auto flex items-center">Code</button>
+          <a href="https://github.com/BaduleanuGeorge/Travel4You/tree/main/Travel4You" target="_blank"><button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 duration-300 px-4 my-4 py-3 mx-auto flex items-center">Code</button></a>
         </div>
       </div>
     </div>
