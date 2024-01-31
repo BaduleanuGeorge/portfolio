@@ -12,9 +12,9 @@ export default function About() {
 
         <div className="pt-8 flex flex-col lg:flex-row items-center">
           {/* Image container */}
-          <div className="relative w-[600px] flex justify-center order-first lg:order-last">
+          <div className="relative w-[300px] sm:w-[600px] flex justify-center order-first lg:order-last">
             <div
-              className="animate-pulse absolute top-1/2 left-1/2 transform -translate-x-[46%] -translate-y-[46%] w-[350px] h-[350px]
+              className="hidden sm:flex animate-pulse absolute top-1/2 left-1/2 transform -translate-x-[46%] -translate-y-[46%] w-[350px] h-[350px]
                border-[6px] border-pink-700 z-10 rounded-lg"
             ></div>
             <img src={Me} className="w-[350px] z-20 rounded-lg" />

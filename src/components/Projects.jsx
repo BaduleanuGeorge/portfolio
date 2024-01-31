@@ -40,8 +40,10 @@ export default function Projects() {
             title="Plant A Tree"
             paragraph="Plant A Tree is a project focused on designing a website for a non-profit 
             company which aims to combat deforestation."
-            button1="Demo"
-            button2="Code"
+            button1="Project"
+            button1Link="https://www.figma.com/file/VoD7r2hLfXmpht0Yv1kq3i/Plant-A-Tree?type=design&node-id=0%3A1&mode=design&t=VMfZSaPHb1raABIF-1" // Replace with the actual link
+            button2="Source"
+            button2Link="https://github.com/BaduleanuGeorge/Plant-A-Tree"
           />
         </div>
       </div>
