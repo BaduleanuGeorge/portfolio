@@ -1,9 +1,9 @@
 import React from "react";
 import Me from "../assets/Me.jpeg";
 
-export default function About() {
+const About = ({ scrollToSection }) => {
   return (
-    <div name="about" className="w-full h-auto py-16 bg-[#0a192f]">
+    <div id="aboutSection" className="w-full h-auto py-16 bg-[#0a192f]">
       {/* Screen limit */}
       <div className="max-w-6xl mx-auto h-full px-3">
         <h2 className="text-white text-2xl border-b-2 w-fit border-pink-700">
@@ -35,7 +35,10 @@ export default function About() {
               websites and applications.
             </p>
             <div className="pt-4">
-              <button className="py-3 px-6 border-2 rounded-lg bg-white border-white hover:bg-pink-700 hover:border-pink-700 hover:text-white duration-300 flex justify-center items-center gap-1">
+              <button
+                className="py-3 px-6 border-2 rounded-lg bg-white border-white hover:bg-pink-700 hover:border-pink-700 hover:text-white duration-300 flex justify-center items-center gap-1"
+                onClick={() => scrollToSection("contactSection")}
+              >
                 Contact me
               </button>
             </div>
@@ -44,4 +47,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
+
+export default About;

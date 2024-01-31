@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
-export default function Navbar() {
+const Navbar = ({ scrollToSection }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
   };
 
   return (
@@ -33,28 +36,44 @@ export default function Navbar() {
             showMenu ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out`}
         >
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li onClick={() => scrollToSection("heroSection")} closeMenu>
+            Home
+          </li>
+          <li onClick={() => scrollToSection("aboutSection")}>About</li>
+          <li onClick={() => scrollToSection("projectsSection")}>Projects</li>
+          <li onClick={() => scrollToSection("contactSection")}>Contact</li>
         </ul>
 
         {/* DESKTOP MENU */}
         <ul className="hidden lg:flex gap-8 text-lg text-white">
-          <li className="cursor-pointer hover:text-gray-300 duration-300">
+          <li
+            className="cursor-pointer hover:text-gray-300 duration-300"
+            onClick={() => scrollToSection("heroSection")}
+          >
             Home
           </li>
-          <li className="cursor-pointer hover:text-gray-300 duration-300">
+          <li
+            className="cursor-pointer hover:text-gray-300 duration-300"
+            onClick={() => scrollToSection("aboutSection")}
+          >
             About
           </li>
-          <li className="cursor-pointer hover:text-gray-300 duration-300">
+          <li
+            className="cursor-pointer hover:text-gray-300 duration-300"
+            onClick={() => scrollToSection("projectsSection")}
+          >
             Projects
           </li>
-          <li className="cursor-pointer hover:text-gray-300 duration-300">
+          <li
+            className="cursor-pointer hover:text-gray-300 duration-300"
+            onClick={() => scrollToSection("contactSection")}
+          >
             Contact
           </li>
         </ul>
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;

@@ -2,10 +2,10 @@ import React from "react";
 import { BsArrowRightShort, BsArrowDownShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export default function Hero() {
+const Hero = ({ scrollToSection }) => {
   return (
     <div
-      name="home"
+      id="heroSection"
       className="relative w-full h-[90vh] bg-[url('../src/assets/HeroBG.jpg')] bg-cover bg-center bg-no-repeat"
     >
       <div className="w-full h-full bg-[#0a192f]/80">
@@ -20,7 +20,10 @@ export default function Hero() {
             seamlessly merge form and function.
           </h3>
           <div className="pt-8 flex gap-4">
-            <button className="py-3 px-6 border-2 rounded-lg bg-white border-white hover:bg-pink-700 hover:border-pink-700 hover:text-white duration-300 flex justify-center items-center gap-1">
+            <button
+              className="py-3 px-6 border-2 rounded-lg bg-white border-white hover:bg-pink-700 hover:border-pink-700 hover:text-white duration-300 flex justify-center items-center gap-1"
+              onClick={() => scrollToSection("projectsSection")}
+            >
               Projects <BsArrowRightShort size={25} />
             </button>
             <button className="py-3 px-6 border-2 border-white rounded-lg text-white hover:bg-white hover:text-black duration-300 flex justify-center items-center gap-1">
@@ -28,12 +31,15 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <a href="about">
-          <div className="absolute left-[45%] bottom-20 text-white animate-bounce cursor-pointer">
-            <BsArrowDownShort size={60} />
-          </div>
-        </a>
+        <div className="absolute left-[45%] bottom-20 text-white animate-bounce cursor-pointer">
+          <BsArrowDownShort
+            size={60}
+            onClick={() => scrollToSection("aboutSection")}
+          />
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

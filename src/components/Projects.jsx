@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <div className="w-full h-auto bg-[#0a192f] py-14">
+    <div id="projectsSection" className="w-full h-auto bg-[#0a192f] py-14">
       <div className="max-w-6xl mx-auto h-full px-3">
         <h2 className="text-white text-2xl border-b-2 w-fit border-pink-700">
           My work

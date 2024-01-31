@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-function Contact() {
+const Contact = ({ scrollToSection }) => {
   const redirectToExternalLink = (url) => {
     window.open(url, "_blank");
   };
@@ -14,7 +14,7 @@ function Contact() {
   };
 
   return (
-    <div className="w-full h-auto bg-[#001b44] pt-24 pb-36">
+    <div id="contactSection" className="w-full h-auto bg-[#001b44] pt-24 pb-36">
       <div className="max-w-6xl mx-auto h-full px-3">
         <div className="w-full h-full flex flex-col items-center">
           <h2 className="text-white text-2xl md:text-4xl border-b-2 w-fit border-pink-700">
@@ -49,6 +49,6 @@ function Contact() {
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
