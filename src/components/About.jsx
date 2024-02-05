@@ -34,7 +34,7 @@ const About = ({ scrollToSection }) => {
               aesthetics, resulting in visually appealing, highly functional
               websites and applications.
             </p>
-            <div className="pt-4">
+            <div className="pt-10">
               <button
                 className="py-3 px-6 border-2 rounded-lg bg-white border-white hover:bg-pink-700 hover:border-pink-700 hover:text-white duration-300 flex justify-center items-center gap-1"
                 onClick={() => scrollToSection("contactSection")}

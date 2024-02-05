@@ -14,11 +14,11 @@ const Navbar = ({ scrollToSection }) => {
   };
 
   return (
-    <div className="fixed w-full h-[80px] bg-[#0a192f] z-50 border-b-[1px] border-gray-700">
+    <div className="fixed w-full h-[60px] bg-[#0a192f] z-50">
       <div className="max-w-6xl mx-auto h-full px-4 flex justify-between items-center">
         {/* LOGO */}
         <div>
-          <h1 className="text-white">BG</h1>
+          <h1 className="text-white custom-logo text-xl">Baduleanu G.</h1>
         </div>
 
         {/* MENU ICONS */}
@@ -32,16 +32,42 @@ const Navbar = ({ scrollToSection }) => {
 
         {/* MOBILE MENU */}
         <ul
-          className={`fixed top-0 right-0 w-[350px] md:w-[400px] h-screen bg-[#0a192f]/95 text-white flex flex-col items-center justify-evenly text-xl transform ${
+          className={`fixed top-0 right-0 w-[280px] md:w-[400px] h-screen bg-[#0a192f] text-white flex flex-col items-center justify-evenly text-xl transform ${
             showMenu ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out`}
         >
-          <li onClick={() => scrollToSection("heroSection")} closeMenu>
+          <li
+            onClick={() => {
+              scrollToSection("heroSection");
+              closeMenu();
+            }}
+          >
             Home
           </li>
-          <li onClick={() => scrollToSection("aboutSection")}>About</li>
-          <li onClick={() => scrollToSection("projectsSection")}>Projects</li>
-          <li onClick={() => scrollToSection("contactSection")}>Contact</li>
+          <li
+            onClick={() => {
+              scrollToSection("aboutSection");
+              closeMenu();
+            }}
+          >
+            About
+          </li>
+          <li
+            onClick={() => {
+              scrollToSection("projectsSection");
+              closeMenu();
+            }}
+          >
+            Projects
+          </li>
+          <li
+            onClick={() => {
+              scrollToSection("contactSection");
+              closeMenu();
+            }}
+          >
+            Contact
+          </li>
         </ul>
 
         {/* DESKTOP MENU */}

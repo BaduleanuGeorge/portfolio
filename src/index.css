@@ -6,3 +6,7 @@ body{
     font-family: 'Outfit', sans-serif;
     scroll-behavior: smooth;
 }
+
+.custom-logo{
+    font-family: 'Satisfy', cursive;
+}

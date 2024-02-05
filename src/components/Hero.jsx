@@ -1,12 +1,11 @@
 import React from "react";
 import { BsArrowRightShort, BsArrowDownShort } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 const Hero = ({ scrollToSection }) => {
   return (
     <div
       id="heroSection"
-      className="relative w-full h-[90vh] bg-[url('../src/assets/HeroBG.jpg')] bg-cover bg-center bg-no-repeat"
+      className="relative w-full h-[85vh] bg-[url('../src/assets/HeroBG.jpg')] bg-cover bg-center bg-no-repeat"
     >
       <div className="w-full h-full bg-[#0a192f]/80">
         <div className="max-w-6xl mx-auto h-full flex flex-col justify-center items-start px-4">
@@ -19,7 +18,7 @@ const Hero = ({ scrollToSection }) => {
             principles. I craft elegant, user-centric digital solutions that
             seamlessly merge form and function.
           </h3>
-          <div className="pt-8 flex gap-4">
+          <div className="pt-10 flex gap-4">
             <button
               className="py-3 px-6 border-2 rounded-lg bg-white border-white hover:bg-pink-700 hover:border-pink-700 hover:text-white duration-300 flex justify-center items-center gap-1"
               onClick={() => scrollToSection("projectsSection")}
@@ -30,12 +29,6 @@ const Hero = ({ scrollToSection }) => {
               Resume <BsArrowDownShort size={25} />
             </button>
           </div>
-        </div>
-        <div className="absolute left-[45%] bottom-20 text-white animate-bounce cursor-pointer">
-          <BsArrowDownShort
-            size={60}
-            onClick={() => scrollToSection("aboutSection")}
-          />
         </div>
       </div>
     </div>
