@@ -9,10 +9,6 @@ const Navbar = ({ scrollToSection }) => {
     setShowMenu(!showMenu);
   };
 
-  const closeMenu = () => {
-    setShowMenu(false);
-  };
-
   return (
     <div className="fixed w-full h-[60px] bg-[#0a192f] z-50">
       <div className="max-w-6xl mx-auto h-full px-4 flex justify-between items-center">
